@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="alert_dialog_padding">24dp</dimen>
+    <dimen name="alert_dialog_padding_top">18dp</dimen>
+    <dimen name="alert_dialog_padding_bottom">0dp</dimen>
+
+    <dimen name="main_horizontal_margin">50dp</dimen>
+    <dimen name="main_vertical_margin_top">28dp</dimen>
+    <dimen name="main_device_name_margin_top">28dp</dimen>
+    <dimen name="main_section_padding">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+</resources>
