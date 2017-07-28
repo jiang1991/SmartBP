@@ -1,7 +1,6 @@
 package com.viatom.smartbp.dfu;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.NotificationManager;
 import android.bluetooth.BluetoothDevice;
@@ -28,7 +27,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.viatom.smartbp.MainActivity;
+import com.viatom.smartbp.activity.MainActivity;
 import com.viatom.smartbp.R;
 import com.viatom.smartbp.fragment.PermissionRationaleFragment;
 import com.viatom.smartbp.fragment.UploadCancelFragment;

@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.viatom.smartbp.fragment.MeasureStartFragment">
+
+    <LinearLayout
+        android:layout_margin="@dimen/measure_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/guest_mode"
+            android:textSize="20sp"/>
+
+        <Switch
+            android:id="@+id/measure_is_guest"
+            android:layout_weight="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/measure_horizontal_margin"
+        android:layout_marginTop="@dimen/main_vertical_margin_top"
+        android:freezesText="true"
+        android:text="@string/not_available"
+        android:textColor="@color/darkGray"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/measure_wear_cuff"
+                android:contentDescription=""
+                android:layout_width="0dp"
+                android:layout_weight="0.6"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/wear_cuff"/>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/measure_arrow_down"
+            android:contentDescription=""
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/measure_arrow_down"/>
+
+
+        <Button
+            android:id="@+id/measure_action_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_start"
+            android:textColor="@color/Black"
+            android:background="@drawable/round_button_shape"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

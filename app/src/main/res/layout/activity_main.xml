@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<include
-        android:id="@+id/toolBar"
-        layout="@layout/toolbar" />
-
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/device_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bnve"
-        android:layout_below="@+id/toolBar"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/alert_dialog_padding_bottom"
+        android:paddingEnd="@dimen/alert_dialog_padding"
+        android:paddingStart="@dimen/alert_dialog_padding"
+        android:paddingTop="@dimen/alert_dialog_padding_top"
+        android:scrollbarStyle="outsideOverlay"
+        tools:listitem="@layout/device_list_row"/>
 
-    <include
-        android:id="@+id/bnve"
-        layout="@layout/bnve" />-->
+    <Button
+        android:id="@+id/action_cancel"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/scanner_action_scan"/>
 
-</RelativeLayout>
+</LinearLayout>

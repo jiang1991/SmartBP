@@ -1,9 +1,24 @@
 <resources>
     <string name="app_name">SmartBP</string>
 
+    <!-- bottom nav -->
     <string name="nav_measure">Measure</string>
     <string name="nav_history">History</string>
     <string name="nav_setting">Setting</string>
+
+    <!-- measure -->
+    <string name="guest_mode">Guest Mode</string>
+
+    <string name="measure_sys">SYS</string>
+    <string name="measure_dia">DIA</string>
+    <string name="measure_pr">Pulse Rate</string>
+    <string name="bp_unit">mmHg</string>
+    <string name="pr_unit">BPM</string>
+    <string name="action_restart">Restart</string>
+    <string name="action_start">Start</string>
+    <string name="action_stop_pump">STOP Pumping</string>
+
+    <string name="measure_error">Measure Result Error</string>
 
     <string name="ok">OK</string>
     <string name="yes">Yes</string>
@@ -19,7 +34,7 @@
     <string name="scanner_empty">No device found</string>
     <string name="battery">%d%%</string>
     <string name="not_available">n/a</string>
-    <string name="not_available_value">" - "</string>
+    <string name="not_available_value">" - - "</string>
     <string name="no_ble">Device doesn\'t have BLE support!</string>
     <string name="no_apps">No profiles found.</string>
     <string name="not_supported">The device does not have required services.</string>

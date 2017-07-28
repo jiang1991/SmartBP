@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:orientation="vertical"
+             tools:context="com.viatom.smartbp.fragment.MeasureResultFragment">
+
+    <TextView
+        android:layout_marginTop="@dimen/alert_dialog_padding_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/measure_error"
+        android:textAlignment="center"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/measure_vertical_margin_top"
+        android:layout_marginStart="@dimen/measure_horizontal_margin"
+        android:layout_marginEnd="@dimen/measure_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/measure_result_sys"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/measure_sys"
+            android:textSize="36sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/measure_result_sys"
+            android:textSize="18sp"
+            android:text="@string/bp_unit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available_value"
+            android:textSize="36sp"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/measure_vertical_margin_top"
+        android:layout_marginStart="@dimen/measure_horizontal_margin"
+        android:layout_marginEnd="@dimen/measure_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/measure_result_dia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/measure_dia"
+            android:textSize="36sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/measure_result_dia"
+            android:textSize="18sp"
+            android:text="@string/bp_unit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available_value"
+            android:textSize="36sp"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/measure_vertical_margin_top"
+        android:layout_marginStart="@dimen/measure_horizontal_margin"
+        android:layout_marginEnd="@dimen/measure_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/measure_result_pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/measure_pr"
+            android:textSize="36sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/measure_result_pr"
+            android:textSize="18sp"
+            android:text="@string/pr_unit"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available_value"
+            android:textSize="36sp"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom">
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:text="@string/action_restart"
+            android:background="@drawable/round_button_shape"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

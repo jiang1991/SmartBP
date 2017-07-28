@@ -26,8 +26,8 @@ public class DeviceListAdapter extends BaseAdapter {
     private static final int TYPE_ITEM = 1;
     private static final int TYPE_EMPTY = 2;
 
-    private final ArrayList<ExtendedBluetoothDevice> mListBondedValues = new ArrayList<>();
-    private final ArrayList<ExtendedBluetoothDevice> mListValues = new ArrayList<>();
+    private final ArrayList<SmartBPDevice> mListBondedValues = new ArrayList<>();
+    private final ArrayList<SmartBPDevice> mListValues = new ArrayList<>();
     private final Context mContext;
 
     public DeviceListAdapter(Context context) {
@@ -39,9 +39,9 @@ public class DeviceListAdapter extends BaseAdapter {
      * @param devices list of bonded devices.
      */
     public void addBondedDevices(final Set<BluetoothDevice> devices) {
-        final List<ExtendedBluetoothDevice> bondedDevices = mListBondedValues;
+        final List<SmartBPDevice> bondedDevices = mListBondedValues;
         for (BluetoothDevice device : devices) {
-            bondedDevices.add(new ExtendedBluetoothDevice(device));
+            bondedDevices.add(new SmartBPDevice(device));
         }
         notifyDataSetChanged();
     }
@@ -52,9 +52,9 @@ public class DeviceListAdapter extends BaseAdapter {
      */
     public void update(final List<ScanResult> results) {
         for (final ScanResult result : results) {
-            final ExtendedBluetoothDevice device = findDevice(result);
+            final SmartBPDevice device = findDevice(result);
             if (device == null) {
-                mListValues.add(new ExtendedBluetoothDevice(result));
+                mListValues.add(new SmartBPDevice(result));
             } else {
                 device.name = result.getScanRecord() != null ? result.getScanRecord().getDeviceName() : null;
                 device.rssi = result.getRssi();
@@ -63,11 +63,11 @@ public class DeviceListAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    private ExtendedBluetoothDevice findDevice(final ScanResult result) {
-        for (final ExtendedBluetoothDevice device : mListBondedValues)
+    private SmartBPDevice findDevice(final ScanResult result) {
+        for (final SmartBPDevice device : mListBondedValues)
             if (device.matches(result))
                 return device;
-        for (final ExtendedBluetoothDevice device : mListValues)
+        for (final SmartBPDevice device : mListValues)
             if (device.matches(result))
                 return device;
         return null;
@@ -169,18 +169,24 @@ public class DeviceListAdapter extends BaseAdapter {
                     view.setTag(holder);
                 }
 
-                final ExtendedBluetoothDevice device = (ExtendedBluetoothDevice) getItem(position);
+                final SmartBPDevice device = (SmartBPDevice) getItem(position);
                 final ViewHolder holder = (ViewHolder) view.getTag();
                 final String name = device.name;
                 holder.name.setText(name != null ? name : mContext.getString(R.string.not_available));
                 holder.address.setText(device.device.getAddress());
-                if (!device.isBonded || device.rssi != ExtendedBluetoothDevice.NO_RSSI) {
+
+                /*if (!device.isBonded || device.rssi != SmartBPDevice.NO_RSSI) {
                     final int rssiPercent = (int) (100.0f * (127.0f + device.rssi) / (127.0f + 20.0f));
                     holder.rssi.setImageLevel(rssiPercent);
                     holder.rssi.setVisibility(View.VISIBLE);
                 } else {
                     holder.rssi.setVisibility(View.GONE);
-                }
+                }*/
+
+                final int rssiPercent = (int) (100.0f * (127.0f + device.rssi) / (127.0f + 20.0f));
+                holder.rssi.setImageLevel(rssiPercent);
+                holder.rssi.setVisibility(View.VISIBLE);
+
                 break;
         }
 

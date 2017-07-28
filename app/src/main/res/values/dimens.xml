@@ -12,4 +12,9 @@
     <dimen name="fab_margin">16dp</dimen>
 
 
+    <!-- measure -->
+    <dimen name="measure_vertical_margin_top">40dp</dimen>
+    <dimen name="measure_horizontal_margin">20dp</dimen>
+
+
 </resources>

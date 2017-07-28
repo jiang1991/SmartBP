@@ -34,7 +34,7 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Sc
 
     private BleManager<? extends BleManagerCallbacks> mBleManager;
 
-    private TextView mDeviceNameView;
+//    private TextView mDeviceNameView;
     private TextView mBatteryLevelView;
     private Button mConnectButton;
 
@@ -70,7 +70,7 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Sc
 
     protected final void setUpView() {
         // set GUI
-        mDeviceNameView = (TextView) findViewById(R.id.device_name);
+//        mDeviceNameView = (TextView) findViewById(R.id.device_name);
         mBatteryLevelView = (TextView) findViewById(R.id.battery);
     }
 
@@ -154,7 +154,7 @@ public abstract class BleProfileActivity extends AppCompatActivity implements Sc
             @Override
             public void run() {
                 mConnectButton.setText(R.string.action_connect);
-                mDeviceNameView.setText(getDefaultDeviceName());
+//                mDeviceNameView.setText(getDefaultDeviceName());
                 mBatteryLevelView.setText(R.string.not_available);
             }
         });

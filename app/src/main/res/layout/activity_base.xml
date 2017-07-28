@@ -9,16 +9,16 @@
         android:id="@+id/toolBar"
         layout="@layout/toolbar" />
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bnve"
-        android:layout_below="@+id/toolBar"/>
-
     <include
         android:id="@+id/bnve"
         layout="@layout/bnve" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bnve"
+        android:layout_below="@id/toolBar"/>
+
 
 </RelativeLayout>

@@ -137,7 +137,7 @@ public class ScannerFragment extends DialogFragment {
             public void onItemClick(final AdapterView<?> parent, final View view, final int position, final long id) {
                 stopScan();
                 dialog.dismiss();
-                final ExtendedBluetoothDevice d = (ExtendedBluetoothDevice) mAdapter.getItem(position);
+                final SmartBPDevice d = (SmartBPDevice) mAdapter.getItem(position);
 //                final BluetoothDevice device = (BluetoothDevice) mAdapter.getItem(position);
                 mListener.onDeviceSelected(d.device, d.name);
             }
@@ -159,7 +159,7 @@ public class ScannerFragment extends DialogFragment {
             }
         });
 
-        addBondedDevices();
+//        addBondedDevices();
         if (savedInstanceState == null)
             startScan();
         return dialog;
@@ -222,14 +222,13 @@ public class ScannerFragment extends DialogFragment {
         scanner.startScan(filters, settings, scanCallback);
 
         mIsScanning = true;
-        mHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if (mIsScanning) {
-                    stopScan();
-                }
+
+        mHandler.postDelayed(() -> {
+            if (mIsScanning) {
+                stopScan();
             }
         }, SCAN_DURATION);
+
     }
 
     /**

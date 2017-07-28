@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.viatom.smartbp.MainActivity;
+import com.viatom.smartbp.activity.MainActivity;
 
 /**
  * Created by wangjiang on 2017/6/9.
